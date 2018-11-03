@@ -32,21 +32,21 @@ public class JavaExample1 {
                     System.out.println("You are entering data for a college employee.");
                     CollegeEmployee employee = new CollegeEmployee();
                     
-                    arraySizeCheck(arrayPerson, employee);
+                    arrayPerson.add(employee);
                     break;
                 case 'F':
                 case 'f':
                     System.out.println("You are entering data for a faculty member.");
                     Faculty faculty = new Faculty();
 
-                    arraySizeCheck(arrayPerson, faculty);
+                    arrayPerson.add(faculty);
                     break;
                 case 'S':
                 case 's':
                     System.out.println("You are entering data for a student.");
                     Student student = new Student();
 
-                    arraySizeCheck(arrayPerson, student);
+                    arrayPerson.add(student);
                     break;
                 case 'Q':
                 case 'q':
@@ -57,14 +57,36 @@ public class JavaExample1 {
                     break;
             }
         }
-    }
-    
-    public static void arraySizeCheck(ArrayList<Person> arrayList, Person d) {
-        if (arrayList.size() != 1) {
-            arrayList.add(d);
-        } else {
-            System.out.println("Cannot add this item to array. Array is full");
+        // Not sure how to clear the console so, I will add some line breaks to clean up a bit.
+        System.out.printf("%n%n%n%n");
+        
+        System.out.println("\033[1mCollege Employees\033[0m");
+        for (int i = 0; i < arrayPerson.size(); i++) {
+            if (arrayPerson.get(i) instanceof CollegeEmployee && !(arrayPerson.get(i) instanceof Faculty)) {
+                arrayPerson.get(i).display();
+                System.out.printf("%n");
+            } 
         }
+        
+        System.out.println("\033[1mFaculty\033[0m");
+        for (int i = 0; i < arrayPerson.size(); i++) {
+            if (arrayPerson.get(i) instanceof Faculty) {
+                arrayPerson.get(i).display();
+            } 
+        }
+        
+        System.out.println("\033[1mStudents\033[0m");
+        for (int i = 0; i < arrayPerson.size(); i++) {
+            if (arrayPerson.get(i) instanceof Student) {
+                arrayPerson.get(i).display();
+            } 
+        }
+        
+        
+        
+        
+        
+        
     }
 }
 

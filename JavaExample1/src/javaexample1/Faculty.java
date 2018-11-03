@@ -25,6 +25,6 @@ public class Faculty extends CollegeEmployee {
 
     @Override public void display() {
         super.display();
-        System.out.printf(" Tenured: %s", tenured);
+        System.out.printf(" Tenured: %s%n", tenured);
     }
 }
