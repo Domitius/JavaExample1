@@ -81,12 +81,6 @@ public class JavaExample1 {
                 arrayPerson.get(i).display();
             } 
         }
-        
-        
-        
-        
-        
-        
     }
 }
 
