@@ -10,11 +10,11 @@ import java.util.Scanner;
  * @author gavinburris
  */
 public class Person {
-    String firstName;
-    String lastName;
-    String streetAddress;
-    int zipCode;
-    String phoneNum;
+    protected String firstName;
+    protected String lastName;
+    protected String streetAddress;
+    protected int zipCode;
+    protected String phoneNum;
     
     Person() {
         Scanner sc = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class Person {
         this.phoneNum = sc.next();
     }
     
-    public void display() {
+    protected void display() {
         System.out.printf("Name: %s %s Address: %s, %s Phone Number: %s", firstName, lastName, streetAddress, zipCode, phoneNum);
     }
 }
