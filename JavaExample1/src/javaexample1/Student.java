@@ -24,6 +24,6 @@ public class Student extends Person {
     
     @Override public void display() {
         super.display();
-        System.out.printf("Major: %s Grade Point Avg: %s%n", major, gradeAvg);
+        System.out.printf(" Major: %s Grade Point Avg: %s%n", major, gradeAvg);
     }
 }
